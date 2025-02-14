@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 243);
+}
+.main{
+    margin-top: 5%; 
+}
+.anh {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 40%; 
+}
+
+.h1 , .h2{
+    text-align: center;
+    font-size: 1.6vw;
+    margin: 10px 0;
+    width: 40%; 
+    transform: translateX(75%);
+}
+
+
+.h3 {
+    text-align: center;
+    font-size: 0.9vw;
+    margin: 10px 0;
+    width: 40%;
+    transform: translateX(75%); 
+}
+
+.button {
+    background-color: #1877f2;
+    color: white;
+    padding: 0.8% 0;
+    font-size: 1vw;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 40%; 
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+@media (min-width: 240px) and (max-width: 768px) {
+    .main{
+        margin-top: 20%;
+    }
+    .anh{
+        width: 90%;
+    }
+    .h1, .h2{
+        font-size: 5vw;
+        width: 80%;
+        margin-left: -50%;
+    }
+    .h3{
+        font-size: 3vw;
+        width: 90%;
+        margin-left: -63%;
+    }
+    .button{
+        width: 90%;
+        font-size: 3vw;
+        padding: 3% 0;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .main{
+        margin-top: 20%;
+    }
+    .anh{
+        width: 70%;
+    }
+    .h1, .h2{
+        font-size: 3.5vw;
+        width: 60%;
+        margin-left: -25%;
+    }
+    .h3{
+        font-size: 2vw;
+        width: 70%;
+        margin-left: -38%;
+    }
+    .button{
+        width: 70%;
+        font-size: 2vw;
+        padding: 2% 0;
+    }
+}
+

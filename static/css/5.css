@@ -1,0 +1,159 @@
+body {
+    height: 100%; 
+    margin: 0;
+    width: 100%;
+    background-color: rgb(251, 243, 243);
+}
+
+.lop3{
+    background-color: rgb(221, 211, 211);
+    height: 10%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: auto;
+}
+.main{
+    width: 40%;
+    margin: 0 auto;
+}
+.hinh2{
+    width: 100%;
+}
+.hinh1{
+    width: 6%;
+}
+
+.h1{
+    font-size: 2vw;
+}
+.h2{
+    font-size: 1.3vw;
+}
+.h3{
+    font-size: 0.9vw;
+    color: #007bff;
+}
+.button-text {
+    display: inline-block; 
+}
+.bang{
+    margin-top: 5%;
+    width: 100%;
+}
+input[type="number"]{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+    text-align: center;
+}
+#submitButton {
+    position: relative;  
+    width: 100%;
+    padding: 2.5%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;  
+    min-height: 55px; 
+}
+.spinner {
+    position: absolute;
+    top: 25%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 25px; 
+    height: 25px;
+    border: 2px solid white;
+    border-left-color: rgb(0, 123, 255);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.submit-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#submitButton.hidden-text .button-text {
+    visibility: hidden;
+}
+.row {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin: 0 0;
+    min-height: 16px; 
+}
+.status {
+    transform: translateX(0);
+}
+@media (min-width: 240px) and (max-width: 768px) {
+    .main{
+        width: 95%;
+    }
+    .hinh1{
+        width: 10%;
+
+    }
+    .h1{
+        font-size: 6.5vw;
+    }
+    .h2{
+        font-size: 4vw;
+    }
+    .h3{
+        font-size: 3vw;
+    }
+    .hh1{
+        font-size: 3vw;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .main{
+        width: 60%;
+    }
+    .hinh1{
+        width: 8%;
+
+    }
+    .h1{
+        font-size: 3.5vw;
+    }
+    .h2{
+        font-size: 2vw;
+    }
+    .h3{
+        font-size: 1.5vw;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+
+    .hinh1{
+        width: 7%;
+    }
+    .h1{
+        font-size: 2.5vw;
+    }
+    .h2{
+        font-size: 1.4vw;
+    }
+    .h3{
+        font-size: 1.2vw;
+    }
+    .hh1{
+        font-size: 1.2vw;
+    }
+}

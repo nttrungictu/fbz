@@ -1,0 +1,267 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 243);
+}
+.main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.lop2 {
+    background-color: rgb(221, 211, 211);
+    height: 10%;
+    margin: 0 auto;
+}
+.anh1 {
+    width: 6%;
+    margin: 0 auto;
+    display: block;
+    margin-left: 1%;
+}
+.anh2 {
+    width: 100%;
+
+}
+.lop1 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+
+
+}
+.h1{
+    font-size: 1.5vw;
+    text-align: center;
+}
+.h3 {
+    width: 100%;
+    font-size: 1vw;
+    text-align: center;
+}
+.bang {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#submitButton {
+    width: 100%;
+    padding: 2.5%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 2%;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 2.9%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.spinner {
+    display: none; 
+    width: 28px;
+    height: 28px;   
+    border: 2px solid white;
+    border-left-color: rgb(0, 123, 255);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute; 
+    top: 22%;
+    left: 49%; 
+
+    
+}
+.button-text {
+    display: inline-block; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.submit-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+}
+#submitButton.hidden-text .button-text {
+    visibility: hidden;
+}
+.row {
+    position: relative;
+    font-size: 0.9vw;
+    color: red;
+    margin: 0;
+    text-align: left;
+    bottom: 2px;
+    left: 10px;
+    min-height: 20px;
+}
+input::placeholder {
+    color: transparent;
+}
+
+label.te {
+    position: absolute;
+    top: 50%; 
+    left: 9px;
+    font-size: 16px;
+    color: #000000;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    transform: translateY(-50%); 
+}
+
+input:focus + label.te,
+.form-group:focus-within label.te {
+    bottom: 5%; 
+    font-size: 12px;
+    color: #007bff;
+    transform: translateY(-100%); 
+}
+
+label.tex {
+    font-size: 16px;
+    cursor: pointer;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.thanhngang1{
+    height: 1px;
+    background-color: #07080b; 
+    width: 100%;
+}
+.hh4{
+    width: 100%;
+    font-size: 0.6vw;
+    text-align: center;
+    margin-top: 1%;
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+input.has-content + label.te {
+    bottom: 5%; 
+    font-size: 12px;
+    color: #007bff;
+    transform: translateY(-100%);
+}
+.keyboard-open {
+    position: fixed; 
+    height: 100%;
+    overflow: hidden; 
+}
+
+
+@media (min-width: 240px) and (max-width: 768px) {
+    .lop1{
+        position: relative;
+        top: 40%;
+        transform: translate(-50%,2%);
+        width: 90%;
+    }
+    .anh1{
+        width: 20%;
+    }
+    .h1{
+        font-size: 5vw;
+    }
+    .h3{
+        font-size: 3.5vw;
+    }
+    input:focus + label.te,
+    .form-group:focus-within label.te {
+        font-size: 2vw;
+        bottom: 3%; 
+    }
+    input.has-content + label.te {
+        font-size: 2vw;
+        bottom: 3%; 
+    }
+    .hh4{
+        font-size: 2vw;
+    }
+    .spinner {
+        width: 20px;
+        height: 20px;   
+    }
+    .row{
+        font-size: 3vw;
+        transform: translateX(-6px);
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .lop1{
+        position: relative;
+        top: 40%;
+        transform: translate(-50%,2%);
+        width: 60%;
+    }
+    .anh1{
+        width: 15%;
+    }
+    .h1{
+        font-size: 3vw;
+    }
+    .h3{
+        font-size: 2vw;
+    }
+    input:focus + label.te,
+    .form-group:focus-within label.te {
+        font-size: 1vw;
+        bottom: 3%; 
+    }
+    input.has-content + label.te {
+        font-size: 1vw;
+        bottom: 3%; 
+    }
+    .hh4{
+        font-size: 1.5vw;
+    }
+    .spinner {
+        width: 20px;
+        height: 20px;   
+    }
+    .row{
+        font-size: 1.7vw;
+        transform: translateX(-6px);
+    }
+}
+@media (min-width: 1200px) and (max-width: 1500px) {
+    .lop1{
+        position: relative;
+        top: 40%;
+        transform: translate(-50%,2%);
+    }
+}
+
+
