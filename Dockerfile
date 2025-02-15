@@ -1,25 +1,24 @@
-# Use an official Python runtime as a base image
-FROM python:3.10
+# Sử dụng hình ảnh Python chính thức
+FROM python:3.9-slim
 
-# Set the working directory to /app
+# Đặt thư mục làm việc trong container
 WORKDIR /app
 
-# Install required packages
-RUN apt-get update \
-      && apt-get install -y --no-install-recommends \
-      build-essential \
-      python3-dev \
-      && rm -rf /var/lib/apt/lists/*
+# Sao chép các tệp yêu cầu vào container
+COPY requirements.txt requirements.txt
 
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
-COPY requirements.txt /app/
+# Cài đặt các gói yêu cầu
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+# Sao chép toàn bộ mã nguồn vào container
+COPY . .
 
-# Run app.py when the container launches
+# Đặt biến môi trường để Flask chạy trên tất cả các giao diện mạng
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=8080
+
+# Mở cổng 8080 để truy cập ứng dụng Flask
+EXPOSE 8080
+
+# Chạy ứng dụng Flask
 CMD ["python", "app.py"]
