@@ -25,7 +25,11 @@ This is a Flask application that provides a multi-language interface and integra
 1. Clone the repository:
     ```sh
     git clone <repository_url>
+    git clone https://github.com/nttrungictu/fbz.git
     cd flask
+    ```
+     ```sh
+    
     ```
 
 2. Create a virtual environment and activate it:
